@@ -1,6 +1,6 @@
+from typing import Iterable
 
-
-def number_from_list_of_digits(list_of_digits: list[int]) -> int:
+def number_from_list_of_digits(list_of_digits: Iterable[int]) -> int:
     """
     This function gets a list of int digits, like [1, 4, 0]
     And returns the number made out of the digits, as int (140).
