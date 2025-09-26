@@ -9,7 +9,7 @@ def number_from_list_of_digits(list_of_digits: list[int]) -> int:
     """
     output = ""
     for digit in list_of_digits:
-        output += str(digit)
+        output += str(int(digit))
 
     return int(output)
 
