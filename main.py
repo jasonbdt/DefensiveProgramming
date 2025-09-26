@@ -7,8 +7,16 @@ def number_from_list_of_digits(list_of_digits: Iterable[int]) -> int:
     If there is a problem with input values, raises a ValueError.
     If there is a problem with input types, raises a TypeError.
     """
+    if isinstance(list_of_digits, set):
+        raise TypeError("Unable to create a number, as sets are unordered.")
+
     output = ""
     for digit in list_of_digits:
+        if 0 < digit >= 10:
+            raise ValueError("Only digits between 0-9 allowed.")
+        elif isinstance(digit, bool):
+            raise TypeError("Only digits between 0-9 allowed.")
+
         output += str(int(digit))
 
     return int(output)
