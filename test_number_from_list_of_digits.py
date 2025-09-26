@@ -67,6 +67,3 @@ def test_with_string_input():
 def test_with_invalid_types():
     with pytest.raises(TypeError):
         number_from_list_of_digits(None)
-
-
-pytest.main()
